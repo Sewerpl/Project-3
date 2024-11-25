@@ -64,3 +64,13 @@ TEST(MergeSortTest, Duplicates) {
     MergeSort::sort(array);
     EXPECT_EQ(array, expected);
 }
+
+TEST(MergeSortTest, LargeArray) {
+    std::vector<int> array(150, 0);
+    for (int i = 0; i < 150; ++i) array[i] = rand() % 100 - 50;
+    std::vector<int> expected = array;
+
+    std::sort(expected.begin(), expected.end());
+    MergeSort::sort(array);
+    EXPECT_EQ(array, expected);
+}
