@@ -56,3 +56,11 @@ TEST(MergeSortTest, SingleElement) {
     MergeSort::sort(array);
     EXPECT_EQ(array, expected);
 }
+
+TEST(MergeSortTest, Duplicates) {
+    std::vector<int> array = {4, 2, 4, 3, 2};
+    std::vector<int> expected = {2, 2, 3, 4, 4};
+
+    MergeSort::sort(array);
+    EXPECT_EQ(array, expected);
+}
