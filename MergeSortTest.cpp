@@ -32,3 +32,11 @@ TEST(MergeSortTest, NegativeNumbers) {
     MergeSort::sort(array);
     EXPECT_EQ(array, expected);
 }
+
+TEST(MergeSortTest, MixedNumbers) {
+    std::vector<int> array = {-3, 2, -5, 1};
+    std::vector<int> expected = {-5, -3, 1, 2};
+
+    MergeSort::sort(array);
+    EXPECT_EQ(array, expected);
+}
