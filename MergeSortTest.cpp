@@ -40,3 +40,11 @@ TEST(MergeSortTest, MixedNumbers) {
     MergeSort::sort(array);
     EXPECT_EQ(array, expected);
 }
+
+TEST(MergeSortTest, EmptyArray) {
+    std::vector<int> array;
+    std::vector<int> expected;
+
+    MergeSort::sort(array);
+    EXPECT_EQ(array, expected);
+}
