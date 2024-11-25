@@ -48,3 +48,11 @@ TEST(MergeSortTest, EmptyArray) {
     MergeSort::sort(array);
     EXPECT_EQ(array, expected);
 }
+
+TEST(MergeSortTest, SingleElement) {
+    std::vector<int> array = {1};
+    std::vector<int> expected = {1};
+
+    MergeSort::sort(array);
+    EXPECT_EQ(array, expected);
+}
